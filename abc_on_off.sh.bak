@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# script  starts/stops multiple listed virtual machines
+
+#list vms to a  file started
+/usr/sbin/qm list --full > started
+
+#append date to file
+echo "The abc_on_off script ran at: $(date)" | tee -a started
+
+#list of desired vms
+vms=(108 109 110 997)
+for n in ${vms[@]}
+do
+	# condition if vm is running
+	if  grep -q "$n" started && grep -q "running" started
+	then
+        	echo "vm $n stopped"
+		qm stop $n
+		sleep 5
+	else
+		# condition if vm is stopped
+		if  grep -q "$n" started && grep -q "stopped" started
+		then
+			echo "vm $n started"
+       			qm start $n
+			sleep 5
+		fi
+	fi		
+done
+

@@ -1,0 +1,11 @@
+      VMID NAME                 STATUS     MEM(MB)    BOOTDISK(GB) PID       
+       104 debian-desktop       stopped    4096              16.00 0         
+       106 perimeter-owrt       stopped    512                0.17 0         
+       107 debian0              stopped    2048              16.00 0         
+       108 debianA              running    2048              16.00 45473     
+       109 DebianB              running    2048              16.00 45543     
+       110 DebianC              running    2048              16.00 45622     
+       996 debian3              stopped    2048              16.00 0         
+       997 debian2              running    2048              16.00 45674     
+       998 debian1              stopped    2048              16.00 0         
+The abc_on_off script ran at: Wed Jan 11 17:10:09 GMT 2023
