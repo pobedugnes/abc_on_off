@@ -2,10 +2,10 @@
 
 # script  starts/stops multiple listed virtual machines
 
-started=vm_current_list.txt
-normal_log=normal_log.log
-error_log=error_log.log
-all_log=all_log.log
+started=.vm_current_list.txt
+normal_log=.normal_log.log
+error_log=.error_log.log
+all_log=.all_log.log
 
 #list vms to a  file started
 /usr/sbin/qm list --full > $started
